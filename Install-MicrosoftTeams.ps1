@@ -28,6 +28,7 @@ Find me on:
 
 Change Log
 V1.00, 15/03/2017 - Initial version
+V1.10, 02/04/2021 - Added commands to launch Teams after installation
 #>
 
 #requires -version 4
@@ -83,6 +84,8 @@ else {
     }
 }
 
+$TeamsApp = "C:\Users\$env:USERNAME\AppData\Local\Microsoft\Teams\Update.exe"
 
+Start-Process -FilePath $TeamsApp -ArgumentList "--processStart ""Teams.exe"" --process-start-args ""--user-initiated"""
 
 
